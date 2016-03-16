@@ -10,9 +10,11 @@ import java.io.Serializable;
  */
 
 @Entity
+@SequenceGenerator(name = "diary", initialValue = 100, allocationSize = 1)
 public class Diary implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "diary")
     private Long id;
 
     @NotNull
