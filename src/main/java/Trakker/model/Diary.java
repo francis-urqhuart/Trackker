@@ -20,8 +20,7 @@ public class Diary implements Serializable {
     private String name;
 
     @NotNull
-    @ManyToOne(cascade = CascadeType.REFRESH)
-    private Member owner;
+    private Long ownerID;
 
     @NotNull
     private boolean defaultDiary;
@@ -43,12 +42,12 @@ public class Diary implements Serializable {
         this.name = name;
     }
 
-    public Member getOwner() {
-        return owner;
+    public Long getOwnerID() {
+        return ownerID;
     }
 
-    public void setOwner(Member owner) {
-        this.owner = owner;
+    public void setOwnerID(Long ownerID) {
+        this.ownerID = ownerID;
     }
 
     public boolean isDefaultDiary() {

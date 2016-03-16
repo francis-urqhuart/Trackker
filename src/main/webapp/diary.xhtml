@@ -38,8 +38,8 @@
                 <h:message for="email" errorClass="invalid"/>
 
                 <h:outputLabel for="userid" value="User ID" />
-                <h:selectOneMenu id="userid" value="#{newDiary.owner}">
-                <f:selectItems value="#{members}" var="m" itemLabel="#{m.username}" itemValue="#{m}" />
+                <h:selectOneMenu id="userid" value="#{newDiary.ownerID}">
+                <f:selectItems value="#{members}" var="m" itemLabel="#{m.username}" itemValue="#{m.id}" />
                 </h:selectOneMenu>
 
             </h:panelGrid>
@@ -72,7 +72,7 @@
             </h:column>
             <h:column>
                 <f:facet name="header">Owner</f:facet>
-                #{_diary.owner.lastName}
+                #{_diary.ownerID}
             </h:column>
             <h:column>
                 <f:facet name="header">Default</f:facet>
