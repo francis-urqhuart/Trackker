@@ -26,7 +26,7 @@ public class DiaryServices {
     private Event<Diary> diaryEventSrc;
 
     public void create(Diary argdiary) throws Exception {
-        log.info("Registering " + argdiary.getName());
+        log.info("Persisting " + argdiary.getName());
         em.persist(argdiary);
         diaryEventSrc.fire(argdiary);
     }
