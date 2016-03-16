@@ -39,7 +39,7 @@
 
                 <h:outputLabel for="userid" value="User ID" />
                 <h:selectOneMenu id="userid" value="#{newDiary.owner}">
-                <f:selectItems value="#{members}" var="m" itemLabel="#{m.usernamem}" itemValue="#{m}" />
+                <f:selectItems value="#{members}" var="m" itemLabel="#{m.username}" itemValue="#{m}" />
                 </h:selectOneMenu>
 
             </h:panelGrid>
