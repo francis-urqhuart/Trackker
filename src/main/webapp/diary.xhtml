@@ -24,7 +24,7 @@
         <h1>Welcome Testapp!</h1>
 
 
-        <h:form id="reg">
+        <h:form id="diary">
             <h2>Diary </h2>
             <p>Enforces annotation-based constraints defined on the
                 model class.</p>
@@ -39,7 +39,7 @@
 
                 <h:outputLabel for="userid" value="User ID" />
                 <h:selectOneMenu id="userid" value="#{newDiary.ownerID}">
-                <f:selectItems value="#{members}" var="m" itemLabel="#{m.username}" itemValue="#{m.id}" />
+                    <f:selectItems value="#{members}" var="m" itemLabel="#{m.username}" itemValue="#{m.id}" />
                 </h:selectOneMenu>
 
             </h:panelGrid>

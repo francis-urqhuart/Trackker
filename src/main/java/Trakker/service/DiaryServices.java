@@ -5,8 +5,6 @@ package Trakker.service;
  */
 
 import Trakker.model.Diary;
-import Trakker.model.Member;
-
 import javax.ejb.Stateless;
 import javax.enterprise.event.Event;
 import javax.inject.Inject;
