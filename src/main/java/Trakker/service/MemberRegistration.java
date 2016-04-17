@@ -42,4 +42,5 @@ public class MemberRegistration {
         em.persist(member);
         memberEventSrc.fire(member);
     }
+
 }

@@ -4,15 +4,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
 <h:head>
     <h:outputStylesheet library="css" name="screen.css"/>
     <title>Enry</title>
 </h:head>
 <h:body>
-    <f:event listener="#{loginController.checkedLoggedIn}"
-             type="preRenderView"/>
+    <!--<f:event listener="#{loginController.checkedLoggedIn}"
+             type="preRenderView"/> -->
     <h:panelGroup>
         <ui:include src="/WEB-INF/includes/header.xhtml"/>
     </h:panelGroup>
@@ -23,11 +23,27 @@
             <h:inputText id="entrydate" value="#{newEntry.entrydate}">
                 <f:convertDateTime pattern="dd.MM.yyyy HH:mm"/>
             </h:inputText>
-            <h:outputLabel for=""/>
-            <h:inputText id="" value="#{newEntry.}"
-
+            <h:message for="entrydate" errorClass="invalid"/>
+            <h:outputLabel for="valuebe" value="BE:"/>
+            <h:inputText id="valuebe" value="#{newEntry.valuebe}" />
+            <h:message for="valuebe" errorClass="invalid"/>
+            <h:outputLabel for="basalinsulin" value="Dosis Basal:"/>
+            <h:inputText id="basalinsulin" value="#{newEntry.basalinsulin}" />
+            <h:message for="basalinsulin" errorClass="invalid"/>
+            <h:outputLabel for="bolusinsulin" value="Dosis Bolus:"/>
+            <h:inputText id="bolusinsulin" value="#{newEntry.bolusinsulin}" />
+            <h:message for="bolusinsulin" errorClass="invalid"/>
         </h:panelGrid>
-
+        <p>
+            <h:panelGrid columns="2">
+                <h:commandButton id="register"
+                                 action="#{entryController.create}"
+                                 value="Create new Diary" styleClass="register"/>
+                <h:messages styleClass="messages"
+                            errorClass="invalid" infoClass="valid"
+                            warnClass="warning" globalOnly="true"/>
+            </h:panelGrid>
+        </p>
 
     </h:form>
     <br></br>
