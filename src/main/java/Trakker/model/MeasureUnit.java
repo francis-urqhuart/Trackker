@@ -22,4 +22,35 @@ public class MeasureUnit implements Serializable {
 
     private String description;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public MeasureUnitTypes getMut() {
+        return mut;
+    }
+
+    public void setMut(MeasureUnitTypes mut) {
+        this.mut = mut;
+    }
+
+    public String getMeasureUnit() {
+        return measureUnit;
+    }
+
+    public void setMeasureUnit(String measureUnit) {
+        this.measureUnit = measureUnit;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

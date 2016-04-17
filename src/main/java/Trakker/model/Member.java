@@ -60,11 +60,24 @@ public class Member implements Serializable {
     @NotNull
     @Digits(fraction = 0,integer= 3)
     private int weight;
+    private Long muWeightID;
 
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date dateOfBirth;
     private String password;
     private String lastName;
+
+    private String basalInsulin;
+    private String bolusInsulin;
+    private Long muInsulinID;
+    private int height;
+    private Long muHeightID;
+    private int maxBloodGlucose;
+    private int minBloodGlucose;
+    private int targetBloodGlucose;
+    private Long muBloodglucoseID;
+
+
 
     public Long getId() {
         return id;
@@ -128,5 +141,85 @@ public class Member implements Serializable {
 
     public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getBasalInsulin() {
+        return basalInsulin;
+    }
+
+    public void setBasalInsulin(String basalInsulin) {
+        this.basalInsulin = basalInsulin;
+    }
+
+    public String getBolusInsulin() {
+        return bolusInsulin;
+    }
+
+    public void setBolusInsulin(String bolusInsulin) {
+        this.bolusInsulin = bolusInsulin;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getMaxBloodGlucose() {
+        return maxBloodGlucose;
+    }
+
+    public void setMaxBloodGlucose(int maxBloodGlucose) {
+        this.maxBloodGlucose = maxBloodGlucose;
+    }
+
+    public int getMinBloodGlucose() {
+        return minBloodGlucose;
+    }
+
+    public void setMinBloodGlucose(int minBloodGlucose) {
+        this.minBloodGlucose = minBloodGlucose;
+    }
+
+    public int getTargetBloodGlucose() {
+        return targetBloodGlucose;
+    }
+
+    public void setTargetBloodGlucose(int targetBloodGlucose) {
+        this.targetBloodGlucose = targetBloodGlucose;
+    }
+
+    public Long getMuWeightID() {
+        return muWeightID;
+    }
+
+    public void setMuWeightID(Long muWeightID) {
+        this.muWeightID = muWeightID;
+    }
+
+    public Long getMuInsulinID() {
+        return muInsulinID;
+    }
+
+    public void setMuInsulinID(Long muInsulinID) {
+        this.muInsulinID = muInsulinID;
+    }
+
+    public Long getMuHeightID() {
+        return muHeightID;
+    }
+
+    public void setMuHeightID(Long muHeightID) {
+        this.muHeightID = muHeightID;
+    }
+
+    public Long getMuBloodglucoseID() {
+        return muBloodglucoseID;
+    }
+
+    public void setMuBloodglucoseID(Long muBloodglucoseID) {
+        this.muBloodglucoseID = muBloodglucoseID;
     }
 }
