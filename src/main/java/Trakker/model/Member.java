@@ -63,12 +63,6 @@ public class Member implements Serializable {
 
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date dateOfBirth;
-    private String basalInsulin;
-    private String bolusInsulin;
-    private int height;
-    private int maxBloodGlucose;
-    private int minBloodGlucose;
-    private int targetBloodGlucose;
     private String password;
     private String lastName;
 
@@ -104,61 +98,12 @@ public class Member implements Serializable {
         this.phoneNumber = phoneNumber;
     }
 
-
     public int getWeight() {
         return weight;
     }
 
     public void setWeight(int weight) {
         this.weight = weight;
-    }
-
-    public String getBolusInsulin() {
-        return bolusInsulin;
-    }
-
-    public void setBolusInsulin(String bolusInsulin) {
-        this.bolusInsulin = bolusInsulin;
-    }
-
-    public String getBasalInsulin() {
-        return basalInsulin;
-    }
-
-    public void setBasalInsulin(String basalInsulin) {
-        this.basalInsulin = basalInsulin;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    public int getMaxBloodGlucose() {
-        return maxBloodGlucose;
-    }
-
-    public void setMaxBloodGlucose(int maxBloodGlucose) {
-        this.maxBloodGlucose = maxBloodGlucose;
-    }
-
-    public int getMinBloodGlucose() {
-        return minBloodGlucose;
-    }
-
-    public void setMinBloodGlucose(int minBloodGlucose) {
-        this.minBloodGlucose = minBloodGlucose;
-    }
-
-    public int getTargetBloodGlucose() {
-        return targetBloodGlucose;
-    }
-
-    public void setTargetBloodGlucose(int targetBloodGlucose) {
-        this.targetBloodGlucose = targetBloodGlucose;
     }
 
     public String getPassword() {

@@ -38,7 +38,7 @@
                 <h:message for="email" errorClass="invalid"/>
 
                 <h:outputLabel for="userid" value="User ID" />
-                <h:selectOneMenu id="userid" value="#{newDiary.ownerID}">
+                <h:selectOneMenu id="userid" value="#{newDiary.memberID}">
                     <f:selectItems value="#{members}" var="m" itemLabel="#{m.username}" itemValue="#{m.id}" />
                 </h:selectOneMenu>
 
@@ -72,7 +72,7 @@
             </h:column>
             <h:column>
                 <f:facet name="header">Owner</f:facet>
-                #{_diary.ownerID}
+                #{_diary.memberID}
             </h:column>
             <h:column>
                 <f:facet name="header">Default</f:facet>

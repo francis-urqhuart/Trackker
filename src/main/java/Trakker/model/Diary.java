@@ -22,7 +22,7 @@ public class Diary implements Serializable {
     private String name;
 
     @NotNull
-    private Long ownerID;
+    private Long memberID;
 
     @NotNull
     private boolean defaultDiary;
@@ -44,12 +44,12 @@ public class Diary implements Serializable {
         this.name = name;
     }
 
-    public Long getOwnerID() {
-        return ownerID;
+    public Long getMemberID() {
+        return memberID;
     }
 
-    public void setOwnerID(Long ownerID) {
-        this.ownerID = ownerID;
+    public void setMemberID(Long memberID) {
+        this.memberID = memberID;
     }
 
     public boolean isDefaultDiary() {

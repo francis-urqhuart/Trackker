@@ -59,7 +59,7 @@ public class DiaryServicesTest {
         Diary diary = new Diary();
         diary.setDefaultDiary(true);
         diary.setName("new diary");
-        diary.setOwnerID(newMember.getId());
+        diary.setMemberID(newMember.getId());
         // when
         diaryServices.create(diary);
 

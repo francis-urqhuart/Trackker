@@ -1,13 +1,14 @@
 package Trakker.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by thufir on 03.04.16.
  */
 @Entity
 @SequenceGenerator(name = "activity", initialValue = 100, allocationSize = 1)
-public class Activity {
+public class Activity implements Serializable {
 
 
     @Id
@@ -16,7 +17,7 @@ public class Activity {
 
     private String name, description;
 
-    private Long MemberId;
+    private Long memberId;
 
     public Long getId() {
         return id;
@@ -43,10 +44,10 @@ public class Activity {
     }
 
     public Long getMemberId() {
-        return MemberId;
+        return memberId;
     }
 
     public void setMemberId(Long memberId) {
-        MemberId = memberId;
+        memberId = memberId;
     }
 }
