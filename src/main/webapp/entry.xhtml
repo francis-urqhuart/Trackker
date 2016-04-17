@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <h:outputStylesheet library="css" name="screen.css"/>
+    <title>Enry</title>
+</h:head>
+<h:body>
+    <f:event listener="#{loginController.checkedLoggedIn}"
+             type="preRenderView"/>
+    <h:panelGroup>
+        <ui:include src="/WEB-INF/includes/header.xhtml"/>
+    </h:panelGroup>
+    <br></br>
+    <h:form id="entry">
+        <h:panelGrid columns="3">
+            <h:outputLabel for="entrydate" value="Datum:"/>
+            <h:inputText id="entrydate" value="#{newentry.}">
+                <f:convertDateTime pattern="dd.MM.yyyy HH:mm"/>
+            </h:inputText>
+
+        </h:panelGrid>
+
+
+    </h:form>
+    <br></br>
+    <br></br>
+    <h:panelGroup>
+        <ui:include src="/WEB-INF/includes/footer.xhtml"/>
+    </h:panelGroup>
+</h:body>
+</html>
+
