@@ -16,7 +16,7 @@ public class MeasureUnit implements Serializable {
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    private MeasureUnitTypes mut;
+    private MeasureUnitTypes type;
 
     private String measureUnit;
 
@@ -30,12 +30,12 @@ public class MeasureUnit implements Serializable {
         this.id = id;
     }
 
-    public MeasureUnitTypes getMut() {
-        return mut;
+    public MeasureUnitTypes getType() {
+        return type;
     }
 
-    public void setMut(MeasureUnitTypes mut) {
-        this.mut = mut;
+    public void setType(MeasureUnitTypes type) {
+        this.type = type;
     }
 
     public String getMeasureUnit() {
