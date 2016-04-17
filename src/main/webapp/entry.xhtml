@@ -19,6 +19,16 @@
     <br></br>
     <h:form id="entry">
         <h:panelGrid columns="3">
+            <h:outputLabel for="userid" value="User ID" />
+            <h:selectOneMenu id="userid" value="#{newEntry.memberID}">
+                <f:selectItems value="#{members}" var="m" itemLabel="#{m.username}" itemValue="#{m.id}" />
+            </h:selectOneMenu>
+            <h:message for="userid" errorClass="invalid"/>
+            <h:outputLabel for="diaryid" value="Diary ID" />
+            <h:selectOneMenu id="diaryid" value="#{newEntry.diaryID}">
+                <f:selectItems value="#{diaries}" var="d" itemLabel="#{d.name}" itemValue="#{d.id}" />
+            </h:selectOneMenu>
+            <h:message for="diaryid" errorClass="invalid"/>
             <h:outputLabel for="entrydate" value="Datum:"/>
             <h:inputText id="entrydate" value="#{newEntry.entrydate}">
                 <f:convertDateTime pattern="dd.MM.yyyy HH:mm"/>
