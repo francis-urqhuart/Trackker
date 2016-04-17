@@ -60,6 +60,34 @@
     <a href="index.xhtml">Back</a>
     <br></br>
     <br></br>
+    <h2>Entries</h2>
+    <h:panelGroup rendered="#{empty entries}">
+        <em>No saved entries.</em>
+    </h:panelGroup>
+    <h:dataTable var="_diary" value="#{entries}"
+                 rendered="#{not empty entries}"
+                 styleClass="simpletablestyle">
+        <h:column>
+            <f:facet name="header">Id</f:facet>
+            #{_entry.id}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Datum</f:facet>
+            #{_entry.name}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Owner</f:facet>
+            #{_entry.memberID}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Diary</f:facet>
+            #{_entry.diaryID}
+        </h:column>
+        <h:column>
+            <f:facet name="header">BE</f:facet>
+            #{_entry.valuebe}
+        </h:column>
+    </h:dataTable>
 <!--    <h:panelGroup>
         <ui:include src="/WEB-INF/includes/footer.xhtml"/>
     </h:panelGroup>-->
