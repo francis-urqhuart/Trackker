@@ -1,6 +1,5 @@
 package Trakker.service;
 
-import Trakker.model.Diary;
 import Trakker.model.Entry;
 
 import javax.ejb.Stateless;

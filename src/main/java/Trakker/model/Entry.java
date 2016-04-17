@@ -14,7 +14,7 @@ public class Entry implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "entry")
     private Long id;
-    private String activityID;
+    private Long activityID;
     private int basalinsulin;
     private boolean beforeactivity;
     private boolean beforemeal;
@@ -23,11 +23,11 @@ public class Entry implements Serializable {
     private Date createdtimestamp;
     private String descactivity;
     private String descmeal;
-    private String diaryID;
+    private Long diaryID;
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date entrydate;
     private String remark;
-    private String memberID;
+    private Long memberID;
     private int valuebe;
     private int valuebloodglucose_mg_dl;
     private double valuebloodglucose_mmol;
@@ -41,11 +41,11 @@ public class Entry implements Serializable {
         this.id = id;
     }
 
-    public String getActivityID() {
+    public Long getActivityID() {
         return activityID;
     }
 
-    public void setActivityID(String activityID) {
+    public void setActivityID(Long activityID) {
         this.activityID = activityID;
     }
 
@@ -105,11 +105,11 @@ public class Entry implements Serializable {
         this.descmeal = descmeal;
     }
 
-    public String getDiaryID() {
+    public Long getDiaryID() {
         return diaryID;
     }
 
-    public void setDiaryID(String diaryID) {
+    public void setDiaryID(Long diaryID) {
         this.diaryID = diaryID;
     }
 
@@ -129,11 +129,11 @@ public class Entry implements Serializable {
         this.remark = remark;
     }
 
-    public String getMemberID() {
+    public Long getMemberID() {
         return memberID;
     }
 
-    public void setMemberID(String memberID) {
+    public void setMemberID(Long memberID) {
         this.memberID = memberID;
     }
 

@@ -1,8 +1,7 @@
 package Trakker.controller;
 
-import Trakker.model.Diary;
 import Trakker.model.Entry;
-import Trakker.service.DiaryServices;
+import Trakker.service.EntryServices;
 
 import javax.enterprise.inject.Model;
 import javax.enterprise.inject.Produces;
