@@ -11,11 +11,12 @@
     <title>Enry</title>
 </h:head>
 <h:body>
+    <f:view>
     <!--<f:event listener="#{loginController.checkedLoggedIn}"
              type="preRenderView"/> -->
-    <!--<h:panelGroup>
+  <h:panelGroup>
         <ui:include src="/WEB-INF/includes/header.xhtml"/>
-    </h:panelGroup>-->
+    </h:panelGroup>
     <br></br>
     <h:form id="entry">
         <h:panelGrid columns="3">
@@ -64,7 +65,7 @@
     <h:panelGroup rendered="#{empty entries}">
         <em>No saved entries.</em>
     </h:panelGroup>
-    <h:dataTable var="_diary" value="#{entries}"
+    <h:dataTable var="_entry" value="#{entries}"
                  rendered="#{not empty entries}"
                  styleClass="simpletablestyle">
         <h:column>
@@ -73,7 +74,7 @@
         </h:column>
         <h:column>
             <f:facet name="header">Datum</f:facet>
-            #{_entry.name}
+            #{_entry.entrydate}
         </h:column>
         <h:column>
             <f:facet name="header">Owner</f:facet>
@@ -87,10 +88,19 @@
             <f:facet name="header">BE</f:facet>
             #{_entry.valuebe}
         </h:column>
+        <h:column>
+            <f:facet name="header">Basal</f:facet>
+            #{_entry.basalinsulin}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Bolus</f:facet>
+            #{_entry.bolusinsulin}
+        </h:column>
     </h:dataTable>
-<!--    <h:panelGroup>
+   <h:panelGroup>
         <ui:include src="/WEB-INF/includes/footer.xhtml"/>
-    </h:panelGroup>-->
+    </h:panelGroup>
+    </f:view>
 </h:body>
 </html>
 
