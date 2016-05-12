@@ -1,5 +1,7 @@
 package Trakker.model;
 
+import Trakker.data.EntryRepository;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -167,6 +169,11 @@ public class Entry implements Serializable {
 
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    public String getMemberName() {
+        EntryRepository er = new EntryRepository() ;
+        return er.getMemberName(this);
     }
 
     @Override

@@ -22,6 +22,7 @@ import Trakker.model.Entry;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
@@ -46,6 +47,17 @@ public class EntryRepository {
         return em.createQuery(criteria).getResultList();
     }
 
+    public String getMemberName(Entry argentry) {
+
+        Query q = em.createQuery("select k from Member k where k.id =" + argentry.getMemberID());
+        String output = (String) q.getSingleResult().toString();
+        return output;
+    }
+
+    public String getDiaryName(Entry argentry) {
+
+        return "null";
+    }
 
     public List<Entry> findAllOrderedByDiary() {
         CriteriaBuilder cb = em.getCriteriaBuilder();
